@@ -11,5 +11,5 @@ A Circuit Python version of The MouseTwiddler
     Replaced by a volume called CircuitPy.
 - To CircuitPy copy the lib folder and the code.py file
 - The Trinkey will start twiddling the mouse every 30 seconds<br>
-    allong with the neopixeld changing colors...
-    
+    along with the neopixeld changing colors...
+
