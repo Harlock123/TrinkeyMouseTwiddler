@@ -6,7 +6,7 @@ from adafruit_hid.mouse import Mouse
 
 # pixels = neopixel.NeoPixel(board.NEOPIXEL, 1)
 
-p1 = neopixel.NeoPixel(board.NEOPIXEL, 4, auto_write=False)
+p1 = neopixel.NeoPixel(board.NEOPIXEL, 4, brightness=0.1, auto_write=False)
 m = Mouse(usb_hid.devices)
 
 modulo = 0
