@@ -6,10 +6,11 @@ from adafruit_hid.mouse import Mouse
 
 # pixels = neopixel.NeoPixel(board.NEOPIXEL, 1)
 
-p1 = neopixel.NeoPixel(board.NEOPIXEL, 4, brightness=0.1, auto_write=False)
+p1 = neopixel.NeoPixel(board.NEOPIXEL, 4, brightness=0.05, auto_write=False)
 m = Mouse(usb_hid.devices)
 
 modulo = 0
+second = 0
 
 while True:
 
@@ -17,25 +18,25 @@ while True:
         p1[0] = (255, 0, 0)
         p1[1] = (0, 255, 0)
         p1[2] = (0, 0, 255)
-        p1[3] = (0, 0, 0)
+        p1[3] = (255,255, 0)
 
     if modulo == 3:
         p1[3] = (255, 0, 0)
         p1[0] = (0, 255, 0)
         p1[1] = (0, 0, 255)
-        p1[2] = (0, 0, 0)
+        p1[2] = (255,255, 0)
 
     if modulo == 2:
         p1[2] = (255, 0, 0)
         p1[3] = (0, 255, 0)
         p1[0] = (0, 0, 255)
-        p1[1] = (0, 0, 0)
+        p1[1] = (255,255, 0)
 
     if modulo == 1:
         p1[1] = (255, 0, 0)
         p1[2] = (0, 255, 0)
         p1[3] = (0, 0, 255)
-        p1[0] = (0, 0, 0)
+        p1[0] = (255,255, 0)
 
     p1.show()
 
@@ -43,19 +44,20 @@ while True:
 
     if modulo == 5:
         modulo = 0
+        second = second +1
 
-    time.sleep(30)
 
-    m.move(2, 0)
-    time.sleep(0.1)
-    m.move(0, 2)
-    time.sleep(0.1)
-    m.move(-2, 0)
-    time.sleep(0.1)
-    m.move(0, -2)
-    time.sleep(0.1)
+    time.sleep(0.25)
 
-    # pixels.fill((255, 0, 0))
-    # time.sleep(0.5)
-    # pixels.fill((0, 0, 0))
-    # time.sleep(0.5)
+    if second == 30:
+        m.move(2, 0)
+        time.sleep(0.1)
+        m.move(0, 2)
+        time.sleep(0.1)
+        m.move(-2, 0)
+        time.sleep(0.1)
+        m.move(0, -2)
+        time.sleep(0.1)
+        second = 0
+
+   
