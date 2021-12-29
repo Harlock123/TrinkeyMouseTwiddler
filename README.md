@@ -13,3 +13,12 @@ A Circuit Python version of The MouseTwiddler
 - The Trinkey will start twiddling the mouse every 30 seconds<br>
     along with the neopixeld changing colors...
 
+If you want to use an alternate blinking pattern...
+
+- Rename the code.py file to something else.
+- Rename the the AlternateBlinky.py file to code.py
+- Eject the CircuitPy volume using your OS Spectific mechanisim.
+    - On the MAC is right click and select eject on the context menu
+    - On windows the USB icon in your taskbar will have options to safely remove the volume
+- Remove and re-insert your trinkey to run the now code...
+-   
