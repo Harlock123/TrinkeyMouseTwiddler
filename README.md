@@ -10,7 +10,7 @@ A Circuit Python version of The MouseTwiddler
 - The Trinkey's leds will flash red and TrinkeyBoot will disappear<br>
     Replaced by a volume called CircuitPy.
 - To CircuitPy copy the lib folder and the code.py file
-- The Trinkey will start twiddling the mouse every 30 seconds<br>
+- The Trinkey will start twiddling the mouse about every 38 seconds<br>
     along with the neopixeld changing colors...
 
 If you want to use an alternate blinking pattern...

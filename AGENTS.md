@@ -21,8 +21,8 @@ There is nothing to build and there are no tests. To deploy:
 ## Layout
 
 - `code.py`: the default program. Every 0.25 s it rotates four colours round the NeoPixels (at brightness 0.05).
-  After 30 counts of 1.25 s each (about 37 s, not the 30 s the README states) it moves the mouse right, down, left
-  and up by 2 pixels.
+  After 30 counts of 1.25 s each (37.5 s, plus 0.4 s for the move itself: about 38 s) it moves the mouse right,
+  down, left and up by 2 pixels.
 - `AlternateBlinky.py`: a quieter pattern. The LEDs stay dark, and every 30 s it moves the mouse in the same small
   square while flashing the LEDs once. Rename it to `code.py` on the board to use it.
 - `lib/`: the compiled CircuitPython libraries the scripts import: `adafruit_hid` (only `mouse.mpy`),
